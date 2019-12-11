@@ -1,5 +1,4 @@
 from datetime import datetime
-
 def merge_internal(merge_data): 
     
     if len(merge_data) >1: 
@@ -40,12 +39,12 @@ def mergesort(data):
     merge_data=data[:]
     start_time=datetime.now()
     print(f"Start Time: {start_time}")
-    
     merge_internal(merge_data)
-
     end_time=datetime.now()
     print(f"End Time: {end_time}")
     total_time = end_time - start_time
     print("Time elapsed (hh:mm:ss.ms) {}".format(total_time))
     print("\n")
+    
     return total_time
+

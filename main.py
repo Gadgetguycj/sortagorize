@@ -18,10 +18,10 @@ for x in range(1, 4):
     print("\nBubble: ")
     results[0]+=bubble(data.random_small)
     results[1]+=bubble(data.random_medium)
-    #results[2]+=bubble(data.random_large)
+    results[2]+=bubble(data.random_large)
     results[3]+=bubble(data.random_slight_small)
     results[4]+=bubble(data.random_slight_medium)
-    #results[5]+=bubble(data.random_slight_large)
+    results[5]+=bubble(data.random_slight_large)
 
     print("\nSelection: ")
     results[6]+=selection(data.random_small)
@@ -45,12 +45,12 @@ for x in range(1, 4):
     results[20]+=mergesort(data.random_large)
     results[21]+=mergesort(data.random_slight_small)
     results[22]+=mergesort(data.random_slight_medium)
-    results[23]+=mergesort(data.random_slight_large)
+    results[23]+mergesort(data.random_slight_large)
 
 
 print("\n\n\nFinished:\n\n")
 
-for x in range(0, 23):
+for x in range(0, 24):
     if x <= 5:
         print("Bubble Sort:")
     elif x <= 11:
@@ -60,6 +60,7 @@ for x in range(0, 23):
     elif x <= 23:
         print("Merge Sort:")
     
-    print(f"{results[x]/3}\n")
+    results[x]=results[x]/3
+    print(f"{results[x]}\n")
     
 
